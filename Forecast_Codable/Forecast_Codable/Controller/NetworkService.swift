@@ -22,6 +22,25 @@ class WeatherNetworkService {
         urlComponents?.queryItems = [apiQuery,cityQuery,unitsQuery]
         guard let finalURL = urlComponents?.url else {return}
         print(finalURL)
+        
+        URLSession.shared.dataTask(with: finalURL) { data, _, error in
+            if let error = error {
+                print("There has been an error fetching the data. The URL is \(finalURL) the error is", error.localizedDescription)
+                completion(nil)
+            }
+            guard let data = data else {
+                print("There was an error recieveing the data!")
+                completion(nil);
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let topLevel = try decoder.decode(TopLevelDictionary.self, from: data)
+                completion(topLevel)
+            } catch { print("Error in Do/Try/Catch: \(error.localizedDescription)")
+                completion(nil)
+            }
+        }.resume()
     }
     
 }// end of class
