@@ -15,6 +15,7 @@
 		413CA72327B0DC4300461FE3 /* DayDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA72227B0DC4300461FE3 /* DayDetailsViewController.swift */; };
 		413CA72527B0DC7E00461FE3 /* DayForcastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413CA72427B0DC7E00461FE3 /* DayForcastTableViewCell.swift */; };
 		9D23EC9C28454B4300B485F1 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23EC9B28454B4300B485F1 /* Days.swift */; };
+		9D23EC9F2845539800B485F1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D23EC9E2845539800B485F1 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		413CA72227B0DC4300461FE3 /* DayDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDetailsViewController.swift; sourceTree = "<group>"; };
 		413CA72427B0DC7E00461FE3 /* DayForcastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForcastTableViewCell.swift; sourceTree = "<group>"; };
 		9D23EC9B28454B4300B485F1 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		9D23EC9E2845539800B485F1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		413CA70527B0DA1C00461FE3 /* Forecast_Codable */ = {
 			isa = PBXGroup;
 			children = (
+				9D23EC9D2845537000B485F1 /* Controller */,
 				9D23EC9A28454B2D00B485F1 /* Model */,
 				413CA71E27B0DBDB00461FE3 /* View */,
 				413CA71A27B0DA5600461FE3 /* Supporting Files */,
@@ -95,6 +98,14 @@
 				9D23EC9B28454B4300B485F1 /* Days.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9D23EC9D2845537000B485F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D23EC9E2845539800B485F1 /* NetworkService.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				9D23EC9C28454B4300B485F1 /* Days.swift in Sources */,
 				413CA72327B0DC4300461FE3 /* DayDetailsViewController.swift in Sources */,
 				413CA70927B0DA1C00461FE3 /* SceneDelegate.swift in Sources */,
+				9D23EC9F2845539800B485F1 /* NetworkService.swift in Sources */,
 				413CA72527B0DC7E00461FE3 /* DayForcastTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
